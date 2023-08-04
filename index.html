@@ -3,19 +3,33 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="icon" href="favicon.png" type="image/png" />
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" />
+		<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
+		<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png" />
+		<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
+		<link rel="icon" type="image/png" sizes="192x192" href="android-chrome-192x192.png" />
 		<link rel="stylesheet" href="assets/style/style.css" />
 		<title>SPR - Scissors, Paper, Rock!</title>
 	</head>
 	<body>
-		<h1>Scissors, Paper, Rock game!</h1>
-		<p>Choose your sign:</p>
-		<button class="signBtn" value="scissors" onclick="playGame(this.value)">Scissors</button>
-		<button class="signBtn" value="paper" onclick="playGame(this.value)">Paper</button>
-		<button class="signBtn" value="rock" onclick="playGame(this.value)">Rock</button>
+		<h1 class="text-center mx-5 mb-2 mt-5 p-4 border rounded slideFromLeft">Scissors, Paper, Rock game!</h1>
+		<div class="mx-5 my-2 p-4 border rounded slideFromRight">
+			<p class="text-center mb-4 fs-4">Choose your sign:</p>
+			<div class="d-flex justify-content-evenly">
+				<button class="signBtn btn rounded" value="scissors" onclick="playGame(this.value)">
+					<img src="assets/imgs/scissors.svg" width="40px" alt="scissors" />
+				</button>
+				<button class="signBtn btn rounded" value="paper" onclick="playGame(this.value)">
+					<img src="assets/imgs/paper.svg" width="40px" alt="paper" />
+				</button>
+				<button class="signBtn btn rounded" value="rock" onclick="playGame(this.value)">
+					<img src="assets/imgs/rock.svg" width="40px" alt="rock" />
+				</button>
+			</div>
+		</div>
 		<div id="userChoice" class="choosenSignBox"></div>
 		<div id="pcChoice" class="choosenSignBox"></div>
-		<div class="results"></div>
+		<div class="results text-center"></div>
 		<script src="script/index.js"></script>
 	</body>
 </html>

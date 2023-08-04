@@ -5,8 +5,11 @@ const getRandomChoice = () => {
 
 const showChoice = (elementId, choice) => {
 	document.getElementById(elementId).innerHTML = `
-            <h4>${elementId === 'userChoice' ? 'Your' : 'PC'} choice:</h4>
-			<p>${choice}</p>
+    <div class="mx-5 my-2 py-2 border rounded slideFromLeft">
+        <h4 class="text-center">${elementId === 'userChoice' ? 'Your' : 'PC'} choice:</h4>
+        <p class="text-center">
+           <img src="assets/imgs/${choice}.svg" width="40px" alt="${choice}"> </p>
+    </div>
     `;
 };
 
@@ -20,14 +23,14 @@ const playGame = (userChoice) => {
 	showChoice('pcChoice', pcChoice);
 
 	if (userChoice === pcChoice) {
-		showResult(`<p>DRAW!</p>`);
+		showResult(`<p class="mx-5 my-2 py-2 border rounded text-bg-warning results">DRAW!</p>`);
 	} else if (
 		(userChoice === 'scissors' && pcChoice === 'paper') ||
 		(userChoice === 'paper' && pcChoice === 'rock') ||
 		(userChoice === 'rock' && pcChoice === 'scissors')
 	) {
-		showResult(`<p>YOU WIN!</p>`);
+		showResult(`<p class="mx-5 my-2 py-2 border rounded text-bg-success results">YOU WIN!</p>`);
 	} else {
-		showResult(`<p>YOU LOSE!</p>`);
+		showResult(`<p class="mx-5 my-2 py-2 border rounded text-bg-danger results">YOU LOSE!</p>`);
 	}
 };
