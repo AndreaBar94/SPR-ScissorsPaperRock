@@ -12,24 +12,27 @@
 		<title>SPR - Scissors, Paper, Rock!</title>
 	</head>
 	<body>
-		<h1 class="text-center mx-5 mb-2 mt-5 p-4 border rounded slideFromLeft">Scissors, Paper, Rock game!</h1>
-		<div class="mx-5 my-2 p-4 border rounded slideFromRight">
-			<p class="text-center mb-4 fs-4">Choose your sign:</p>
-			<div class="d-flex justify-content-evenly">
-				<button class="signBtn btn rounded" value="scissors" onclick="playGame(this.value)">
-					<img src="assets/imgs/scissors.svg" width="40px" alt="scissors" />
-				</button>
-				<button class="signBtn btn rounded" value="paper" onclick="playGame(this.value)">
-					<img src="assets/imgs/paper.svg" width="40px" alt="paper" />
-				</button>
-				<button class="signBtn btn rounded" value="rock" onclick="playGame(this.value)">
-					<img src="assets/imgs/rock.svg" width="40px" alt="rock" />
-				</button>
+		<div class="container">
+			<h1 class="text-center mx-5 mb-2 mt-5 p-4 border rounded slideFromLeft">Scissors, Paper, Rock game!</h1>
+			<div class="mx-5 my-2 p-4 border rounded slideFromRight">
+				<p class="text-center mb-4 fs-4">Choose your sign:</p>
+				<div class="d-flex justify-content-evenly">
+					<button class="signBtn btn rounded" value="scissors" onclick="playGame(this.value)">
+						<img src="assets/imgs/scissors.svg" width="40px" alt="scissors" />
+					</button>
+					<button class="signBtn btn rounded" value="paper" onclick="playGame(this.value)">
+						<img src="assets/imgs/paper.svg" width="40px" alt="paper" />
+					</button>
+					<button class="signBtn btn rounded" value="rock" onclick="playGame(this.value)">
+						<img src="assets/imgs/rock.svg" width="40px" alt="rock" />
+					</button>
+				</div>
 			</div>
+			<div id="userChoice" class="choosenSignBox"></div>
+			<div id="pcChoice" class="choosenSignBox"></div>
+			<div class="results text-center"></div>
 		</div>
-		<div id="userChoice" class="choosenSignBox"></div>
-		<div id="pcChoice" class="choosenSignBox"></div>
-		<div class="results text-center"></div>
+
 		<script src="script/index.js"></script>
 	</body>
 </html>
